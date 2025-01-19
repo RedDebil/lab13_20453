@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default async function MealPage({ params }) {
   const { someName: slug } = params;
-  const meal = getMeal(slug);
+  const meal = await getMeal(slug);
 
   if (!meal) {
     return (
