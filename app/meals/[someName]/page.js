@@ -3,7 +3,7 @@ import classes from './page.module.css';
 import Image from 'next/image';
 
 export default async function MealPage({ params }) {
-  const { someName: slug } = await params;
+  const { someName: slug } = params;
   const meal = getMeal(slug);
 
   if (!meal) {
